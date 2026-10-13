@@ -6,6 +6,11 @@ Requires Node 22+, git, and Java 25. On macOS install Java with `brew install op
 Linux install your distribution's Java 25 JDK (Arch: `pacman -S jdk25-openjdk`) or set
 `JAVA_HOME` to one. `unix.mjs` uses that JDK directly, so no system Java changes are needed.
 
+**WSL2:** works with the Linux launcher below under WSLg (Windows 11 or recent Windows 10). Run
+`GALLIUM_DRIVER=d3d12 node tools/unix.mjs launch ...`; without it Mesa falls back to llvmpipe
+(software rendering). Keep target repos in the Linux filesystem (`~`), not `/mnt/c`. For desktop
+notifications, `sudo apt install libnotify-bin`.
+
 ```sh
 node tools/unix.mjs launch --backend sim            # free simulated team
 node tools/unix.mjs stop --profile sim
