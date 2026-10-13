@@ -17,3 +17,4 @@ foreman/scratch/
 mod/.gradle/
 mod/build/
 .claude/
+.codegraph/
